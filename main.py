@@ -9,6 +9,8 @@ from datetime import datetime
 import d20
 import subprocess
 import ast
+from dotenv import load_dotenv
+
 #Other Sheet Imports
 from functions.important.keepalive import keep_alive, myiter, killiter
 import functions.log
@@ -18,8 +20,10 @@ from functions.log import filemanage, errorlog, printing
 print(f"Starting up, give me a second!")
 bot = commands.InteractionBot(allowed_mentions=AllowedMentions(everyone=False,users=True,roles=True,replied_user=True),intents=Intents.all())
 
+load_dotenv()
+
 GSF = os.environ['GSF']
-Init_Form = os.environ['Init Form']
+Init_Form = os.environ['Init_Form']
 token = os.environ['discord_id']
 server = os.environ['discord_server']
 
@@ -51,14 +55,6 @@ async def on_ready():
 @tasks.loop(minutes=6.0)
 async def change_status():
   await bot.change_presence(activity=disnake.Game(status[next(myiter)]))
-  killery = killer[next(killiter)]
-  if killery == "kill":
-    await bot.close()
-    print("kill 1")
-    subprocess.call("kill 1", shell=True)
-  else:
-    time = datetime.now(timezone).strftime('%m\%d\%Y %H:%M')
-    await printing(f"The time is now {time}")
 
 #@bot.event
 #async def on_error(event, *args, **kwargs):
