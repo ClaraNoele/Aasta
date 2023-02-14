@@ -32,7 +32,7 @@ class reghelp():
         charmenu = disnake.ui.View()
         charmenu.add_item(men)
         
-        await inters.followup.send("Choose One!",view=charmenu,delete_after=15)
+        await inter.followup.send("Choose One!",view=charmenu,delete_after=15)
       button3.callback = button_callback3
       buttons.add_item(button3)
       

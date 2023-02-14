@@ -23,7 +23,7 @@ class MyNumbers:
     x = self.a
     self.a += 1
     if self.a > 9:
-    	self.a = 0
+      self.a = 0
     return x
 
 class KillNumbers:
@@ -35,7 +35,7 @@ class KillNumbers:
     x = self.a
     self.a += 1
     if self.a > 9:
-    	self.a = 0
+      self.a = 0
     return x
 
 myclass = MyNumbers()
