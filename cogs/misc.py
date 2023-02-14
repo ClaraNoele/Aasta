@@ -7,8 +7,11 @@ import disnake.ui
 import datetime
 import d20
 
+
 import functions.sheetstats
 from functions.sheetstats import Stat_List as stl
+
+
 
 addorremove = commands.option_enum({
   "Remove":"Remove",
@@ -17,7 +20,7 @@ addorremove = commands.option_enum({
 
 feedback = os.environ['feedback']
 GSF = os.environ['GSF']
-Init_Form = os.environ['Init Form']
+Init_Form = os.environ['Init_Form']
 
 class Misc(commands.Cog):
   def __init__(self, bot: commands.Bot):

@@ -4,7 +4,7 @@ import os
 
 files = []
 
-time = datetime.datetime.now(pytz.timezone('America/Denver')).strftime('%m\%d\%Y %H:%M')
+time = datetime.datetime.now(pytz.timezone('America/Denver')).strftime('%m~%d~%Y %H:%M')
 
 logFormatter = logging.Formatter("%(asctime)s [%(levelname)-5.5s]  %(message)s")
 consoleFormatter = logging.Formatter("[%(levelname)-5.5s]  %(message)s")
@@ -19,9 +19,9 @@ consoleHandler.setFormatter(consoleFormatter)
 rootLogger.addHandler(consoleHandler)
 
 def filemanage():
-  for file in os.listdir(r'/home/runner/Aasta/databases/logs'):
+  for file in os.listdir(r'C:\Users\tddun\Documents\Aasta-1\databases\logs'):
     if file.endswith(".log"):
-      filepath = os.path.join(r'/home/runner/Aasta/databases/logs', file)
+      filepath = os.path.join(r'C:\Users\tddun\Documents\Aasta-1\databases\logs', file)
       files.append(filepath)
     else:
       continue
@@ -39,13 +39,13 @@ def filemanage():
 
 async def errorlog(error,args):
   file = open(f"databases/logs/log-{time}.log","a")
-  errortime = datetime.datetime.now(pytz.timezone('America/Denver')).strftime('%m\%d\%Y %H:%M')
+  errortime = datetime.datetime.now(pytz.timezone('America/Denver')).strftime('%m~%d~%Y %H:%M')
   print(f"An Error Occured at {errortime}: \n{error}\n{args}")
   file.write(f"An Error Occured at {errortime}: \n{error}\n{args}\n")
   file.close()
 async def printing(statement):
   file = open(f"databases/logs/log-{time}.log","a")
-  errortime = datetime.datetime.now(pytz.timezone('America/Denver')).strftime('%m\%d\%Y %H:%M')
+  errortime = datetime.datetime.now(pytz.timezone('America/Denver')).strftime('%m~%d~%Y %H:%M')
   print(statement)
   file.write(f"Printed a statement at {errortime}: {statement}\n")
   file.close()

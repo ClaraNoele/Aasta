@@ -4,20 +4,11 @@ import ast
 from helpers.genhelp.embedhelper import embedbuilder
 
 links = os.environ['DocLinks']
-links = ast.literal_eval(links)
-selnatainfo = links[0][1]
-daervyninfo = links[1][1]
-daervynweb = links[2][1]
-vayleinfo = links[3][1]
-vaporinfo = links[4][1]
-ofuriainfo = links[5][1]
-tempestiainfo = links[6][1]
-lanaetuinfo = links[7][1]
 Maps = ["Selnata","Veridian","Daervyn","Vayle","Vapor","Ofuria","Lanae'tu","Tempestia"]
-DriveMaps = ast.literal_eval(os.environ['Drive'])
+DriveMaps = os.environ['Drive']
 Race = os.environ['races']
-Rules = ast.literal_eval(os.environ['RuleLinks'])
-Extras = ast.literal_eval(os.environ['extralinks'])
+Rules = os.environ['RuleLinks']
+Extras = os.environ['extralinks']
 # Extras[ACS,Spells,Guilds,History]
 
 
@@ -31,7 +22,7 @@ async def libraryembeds(cf):
         embed = await embedbuilder(
           title = "The Planes Known to the Syndicate",
           desc = "These are the seven remaining planes explored by and homes to various members of the Syndicate. Enjoy exploring their rich and in-depth histories! \n- Aasta",
-          fieldlist = [["", f"[Selnata]({selnatainfo})",True],["",f"[Daervyn]({daervyninfo})\n[Daervyn Website]({daervynweb})",True],["",f"[Vayle]({vayleinfo})",True],["",f"[Vapor]({vaporinfo})",True],["",f"[Ofuria]({ofuriainfo})\n",True],["",f"[Tempestia]({tempestiainfo})",True],["",f"[Lanae'tu]({lanaetuinfo})",True]],
+          fieldlist = [["", f"[Selnata]({links['selnatainfo']})",True],["",f"[Daervyn]({links['daervyninfo']})\n[Daervyn Website]({links['daervynweb']})",True],["",f"[Vayle]({links['vayleinfo']})",True],["",f"[Vapor]({links['vaporinfo']})",True],["",f"[Ofuria]({links['ofuriainfo']})\n",True],["",f"[Tempestia]({links['tempestiainfo']})",True],["",f"[Lanae'tu]({links['lanaetuinfo']})",True]],
           author = [">Library >Planes >Info",""]
         )
         return embed
@@ -39,7 +30,7 @@ async def libraryembeds(cf):
         embed = await embedbuilder(
           title = "The Plane of Selnata",
           desc = "Selnata is the plane which the Syndicate has set up shop, as they say. Though don't think they own the plane. The Syndicate home for their guilds is located on a small island called *The Veridian Isle*. It is quite surprising how small it is compared to the rest of Selnata.\n- Aasta",
-          fieldlist = [["",f"[Selnata Document]({selnatainfo})",True]],
+          fieldlist = [["",f"[Selnata Document]({links['selnatainfo']})",True]],
           author = [">Library >Planes >Info",None]
         )
         return embed
@@ -47,7 +38,7 @@ async def libraryembeds(cf):
         embed = await embedbuilder(
           title = "The Plane of Daervyn",
           desc = "Daervyn is known for it's races and the Shards. Across Daervyn there are Kitsune Tribes that protect portals to the spirit realm and each tribe is named after a different shard. The Shards are godlike beings, though I can't say much more seeing as not much is known about them. Due to the presence of the Kitsune and the Spirit Realm of Daervyn, Necromancy is extremely hated in many areas and are hunted by some Kitsune. So beware if you intend to raise a soul on the plane... \n- Aasta",
-          fieldlist = [["",f"[Daervyn Document]({daervyninfo})",True],["",f"[Daervyn Website]({daervynweb})",True]],
+          fieldlist = [["",f"[Daervyn Document]({links['daervyninfo']})",True],["",f"[Daervyn Website]({links['daervynweb']})",True]],
           author = [">Library >Planes >Info",None]
         )
         return embed
@@ -55,7 +46,7 @@ async def libraryembeds(cf):
         embed = await embedbuilder(
           title = "The Plane of Vayle",
           desc = "Vayle, the plane of Light and Dark. A seemingly constant war between light and dark which has caused those living within it to have difficult lives. Many find peace in the religious aspect of the plane. Believeing in Angelic entities that may roam the plane. You'll be hard pressed to find people on the plane who are familiar with the Syndicate, so keep that in mind... \n- Aasta",
-          fieldlist = [["",f"[Vayle Document]({vayleinfo})",True]],
+          fieldlist = [["",f"[Vayle Document]({'vayleinfo'})",True]],
           author = [">Library >Planes >Info",None]
         )
         return embed
@@ -63,7 +54,7 @@ async def libraryembeds(cf):
         embed = await embedbuilder(
           title = "The Plane of Vapor",
           desc = "Vapor, the land of steam. It is home to the steam powered vehicles and has the general Western Vibe to it. If you're a tinkerer, this is the place to be. With it's mechs created by its people to help defend the plane from hostility. It is also said only in myths, that dragons have made their home on the plane, but none seem to know the truth behind it. \n- Aasta",
-          fieldlist = [["",f"[Vapor Document]({vaporinfo})",True]],
+          fieldlist = [["",f"[Vapor Document]({'vaporinfo'})",True]],
           author = [">Library >Planes >Info",None]
         )
         return embed
@@ -71,7 +62,7 @@ async def libraryembeds(cf):
         embed = await embedbuilder(
           title = "The Plane of Ofuria",
           desc = "Ofuria once a plane of magic, is now a plane crystallized into rubies. Magic is now frowned upon due to mage involvement in the crystallization of the plane. The plane of rubies and ruin is home to the red irised Ofurians that once lived in utopious civilizations. Life has become difficult for the residents of Ofuria, having lost their lavish lives, they rely on other planes to support them as the export the rubies found all over the plane. \n- Aasta",
-          fieldlist = [["",f"[Ofuria Document]({ofuriainfo})",True]],
+          fieldlist = [["",f"[Ofuria Document]({'ofuriainfo'})",True]],
           author = [">Library >Planes >Info",None]
         )
         return embed
@@ -79,7 +70,7 @@ async def libraryembeds(cf):
         embed = await embedbuilder(
           title = "The Plane of Tempestia",
           desc = "Tempestia, the world of storms. The harsh environment has had a large effect on the inhabitants of the plane with some races adapting to their environment in areas they can survive or regions becoming uninhabitable. The plane is home to many specicies of Nymphs but are also home to Elves and various non-planar races. I don't know much more about it, but you should definitely check it out for me! \n- Aasta",
-          fieldlist = [["",f"[Tempestia Document]({tempestiainfo})",True]],
+          fieldlist = [["",f"[Tempestia Document]({'tempestiainfo'})",True]],
           author = [">Library >Planes >Info",None]
         )
         return embed
@@ -87,7 +78,7 @@ async def libraryembeds(cf):
         embed = await embedbuilder(
           title = "The Plane of Lanae'tu",
           desc = "As any who have heard of the plane of Lanae’tu know, it’s a realm primarily composed of sea interspersed by small islands beneath a magnificent, rich skyscape that - at night - is studded with nebulae like jewels in a celestial crown. \n\nSeveral islands and continents of varying sizes dot the plane, from the busy, mercantile port of Lanay Katu, to the pirate nation of Scarda, the idyllic Arcadian Greenlands, and the environmentally diverse continent of Temikor. The island of Juka is home to a great jungle, the lush land of Fae'lu is blanketed by powerful illusions, and Capricorn is home to the magnificent Library of Enka. The Mists of the Wastes are dangerous and ever changing, inhabited by the fearsome Leviathans.\n\nThe islands are home to a broad swathe of peoples, from farmers to aristocrats, and the seas around the islands are home to different Merfolk, each having claimed a portion of the oceans for themselves when they do not dalliance and come onto land. The waves are braved by pirates and sailors, and beneath them, just beneath the hull of their ships, lay creatures as of yet undiscovered.\n\nWelcome to Lanae'tu. \n- Aasta",
-          fieldlist = [["",f"[Lanae'tu Document]({lanaetuinfo})",True]],
+          fieldlist = [["",f"[Lanae'tu Document]({'lanaetuinfo'})",True]],
           author = [">Library >Planes >Info",None]
         )
         return embed
