@@ -1,0 +1,27 @@
+2023-02-14 07:42:23,292 [WARNI]  PyNaCl is not installed, voice will NOT be supported
+2023-02-14 07:42:23,366 [INFO ]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:6666
+ * Running on http://172.31.128.150:6666
+2023-02-14 07:42:23,367 [INFO ]  [33mPress CTRL+C to quit[0m
+Printed a statement at 02\14\2023 00:42: We have logged in as SyndiBot - Aasta#6760.
+Printed a statement at 02\14\2023 00:42: The time is now 02\14\2023 00:42
+2023-02-14 07:47:34,610 [INFO ]  172.31.128.1 - - [14/Feb/2023 07:47:34] "HEAD / HTTP/1.1" 200 -
+Printed a statement at 02\14\2023 00:48: The time is now 02\14\2023 00:48
+2023-02-14 07:52:34,460 [INFO ]  172.31.128.1 - - [14/Feb/2023 07:52:34] "HEAD / HTTP/1.1" 200 -
+Printed a statement at 02\14\2023 00:54: The time is now 02\14\2023 00:54
+2023-02-14 07:57:34,345 [INFO ]  172.31.128.1 - - [14/Feb/2023 07:57:34] "HEAD / HTTP/1.1" 200 -
+Printed a statement at 02\14\2023 01:00: The time is now 02\14\2023 01:00
+2023-02-14 08:02:34,338 [INFO ]  172.31.128.1 - - [14/Feb/2023 08:02:34] "HEAD / HTTP/1.1" 200 -
+Printed a statement at 02\14\2023 01:06: The time is now 02\14\2023 01:06
+2023-02-14 08:07:34,456 [INFO ]  172.31.128.1 - - [14/Feb/2023 08:07:34] "HEAD / HTTP/1.1" 200 -
+2023-02-14 08:12:34,516 [INFO ]  172.31.128.1 - - [14/Feb/2023 08:12:34] "HEAD / HTTP/1.1" 200 -
+Printed a statement at 02\14\2023 01:12: The time is now 02\14\2023 01:12
+2023-02-14 08:17:34,376 [INFO ]  172.31.128.1 - - [14/Feb/2023 08:17:34] "HEAD / HTTP/1.1" 200 -
+Printed a statement at 02\14\2023 01:18: The time is now 02\14\2023 01:18
+2023-02-14 08:22:34,330 [INFO ]  172.31.128.1 - - [14/Feb/2023 08:22:34] "HEAD / HTTP/1.1" 200 -
+Printed a statement at 02\14\2023 01:24: The time is now 02\14\2023 01:24
+2023-02-14 08:27:34,286 [INFO ]  172.31.128.1 - - [14/Feb/2023 08:27:34] "HEAD / HTTP/1.1" 200 -
+An Error Occured at 02\14\2023 01:30: 
+Timeout
+None
